@@ -9,6 +9,41 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
+.rules-overlay {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+.rules-overlay .rules-box {
+  position: relative;
+  background-color: #fff;
+  padding: 50px;
+  margin-top: 140px;
+  display: inline-block;
+  border-radius: 10px;
+  max-width: 80%;
+}
+.rules-overlay .rules-box span.title {
+  color: #3b4363;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.rules-overlay .rules-box span.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.rules-overlay .rules-box img.rules-img {
+  margin-top: 50px;
+  max-width: 80%;
+}
+
 .container {
   width: 80%;
   height: 100vh;
@@ -59,6 +94,7 @@ body {
 .container .game .chooises {
   position: absolute;
   left: calc(50% - 150px);
+  z-index: -1;
 }
 .container .game .chooises:before {
   content: "";
@@ -97,7 +133,7 @@ body {
   left: 105px;
   border-color: #dd405d;
 }
-.container .rules {
+.container .rules-btn {
   display: block;
   position: absolute;
   right: 50px;
@@ -112,11 +148,15 @@ body {
   letter-spacing: 1.5px;
   cursor: pointer;
 }
-.container .rules:hover {
+.container .rules-btn:hover {
   background: #3b4363;
 }
 
 @media (max-width: 768px) {
+  .rules-overlay .rules-box .rules-img {
+    max-width: 100% !important;
+  }
+
   .container .head {
     width: 100%;
     padding: 10px;
@@ -148,7 +188,7 @@ body {
   .container .game .chooises .rock {
     bottom: -200px;
   }
-  .container .rules {
+  .container .rules-btn {
     right: calc(50% - 60px);
   }
 }

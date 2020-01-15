@@ -8,7 +8,41 @@ body{
   background-image:  radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
-
+.rules-overlay {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: .8);
+  text-align: center;
+  .rules-box {
+    position: relative;
+    background-color: #fff;
+    padding: 50px;
+    margin-top: 140px;
+    display: inline-block;
+    border-radius: 10px;
+    max-width: 80%;
+    span.title {
+      color: #3b4363;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+    }
+    span.close-btn {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+    img.rules-img{
+        margin-top: 50px;
+        max-width: 80%;
+    }
+    
+  }
+}
 .container{
   width: 80%;
   height: 100vh;
@@ -57,6 +91,7 @@ body{
     .chooises {
       position: absolute ;
       left: calc(50% - 150px);
+      z-index: -1;
       &:before {
         content: "";
         background: url(../images/bg-triangle.svg) no-repeat;
@@ -96,7 +131,7 @@ body{
       }
     }
   }
-  .rules {
+  .rules-btn {
     display: block;
     position: absolute;
     right: 50px;
@@ -120,6 +155,13 @@ body{
 
 // Start Media Query
 @media (max-width: 768px) {
+  .rules-overlay{
+    .rules-box {
+      .rules-img {
+        max-width: 100% !important;
+      }
+    }
+  }
   .container{
     .head {
       width: 100%;
@@ -156,7 +198,7 @@ body{
         }
       }
     }
-    .rules {
+    .rules-btn {
       right: calc(50% - 60px);
     }
   }
