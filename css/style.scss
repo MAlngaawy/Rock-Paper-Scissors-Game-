@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+// Define Mixins
+@mixin chooise {
+  display: grid;
+  background: rgb(236, 236, 236);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  line-height: 9;
+  border: 10px solid #215487;
+  cursor: pointer;
+  img {
+    width: 60%;
+    margin: auto;
+  }
+}
+
 body{
   background-image:  radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   font-family: 'Barlow Semi Condensed', sans-serif;
@@ -42,7 +58,6 @@ body{
         margin-top: 50px;
         max-width: 80%;
     }
-    
   }
 }
 .container{
@@ -104,32 +119,76 @@ body{
       };
       div {
         position: absolute;
-        display: inline-block;
-        background: rgb(236, 236, 236);
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        line-height: 9;
-        border: 10px solid #215487;
-        cursor: pointer;
-        img {
-          max-width: 55px;
-        }
       }
       .paper {
+        @include chooise();
         left: -10px;
         top: -25px;
         border-color:	#5671f5;
       }
       .scissors {
+        @include chooise();
         top: -25px;
         right: -328px;
         border-color:	#eca922;
       }
       .rock {
+        @include chooise();
         bottom: -290px;
         left: 105px;    
         border-color:	#dd405d;
+      }
+    }
+  }
+  .result-section{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    & > div {
+      display: inline-block;
+      text-align: center;
+      color: #FFF;
+      margin: 50px;
+      h3 {
+        font-size: 40px;
+        margin-bottom: 50px;
+      }
+      .chooise {
+        margin: 30px auto;
+        display: grid;
+        div {
+          @include chooise();
+          width: 200px;
+          height: 200px;
+          border-width: 20px;
+          margin: auto;
+          cursor: unset;
+          img {
+            width: 50%;
+          }
+        }
+        .paper { border-color: #5671f5 };
+        .scissors { border-color: #eca922 };
+        .rock { border-color: #dd405d };
+      }
+    }
+    .result {
+      align-self: center;
+      h1 {
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      .play-again {
+        background-color: #fff;
+        padding: 10px 40px;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          color: #dd405d;
+        }
       }
     }
   }
@@ -182,12 +241,8 @@ body{
           left: 50px;
         }
         div {
-          width: 100px;
-          height: 100px;
-          img {
-            max-width: 40px;
-            margin-bottom: 15px;
-          }
+          width: 100px !important;
+          height: 100px !important;
         }
         .paper {
           left: 20px;
@@ -200,9 +255,37 @@ body{
         }
       }
     }
-    .rules-btn {
-      right: calc(50% - 60px);
+    .result-section {
+      margin-top: 50px;
+      >div {
+        margin: 10px;
+        h3 {
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+        .chooise {
+          div {
+            width: 100px;
+            height: 100px;
+            border-width: 10px;
+          }
+        }
+      }
+      .result {
+        position: absolute;
+        bottom: 100px;
+        h1 {
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+        .play-again {
+          padding: 5px 20px;
+        }
+      }
     }
+      .rules-btn {
+        right: calc(50% - 60px);
+      }
   }
 }
 
