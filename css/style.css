@@ -297,7 +297,7 @@ body {
   }
   .container .result-section .result {
     position: absolute;
-    bottom: 100px;
+    bottom: 200px;
   }
   .container .result-section .result h1 {
     font-size: 30px;
