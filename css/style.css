@@ -85,8 +85,21 @@ body {
   color: #2a46c0;
   letter-spacing: 1px;
   font-weight: 600;
+  display: block;
 }
-.container .head .score-box h2 {
+.container .head .score-box > div {
+  display: inline-block;
+}
+.container .head .score-box > div.user-score {
+  border-right: 2px solid #215487;
+  margin-right: 5px;
+  padding-right: 10px;
+}
+.container .head .score-box > div p {
+  color: #3b4363;
+  font-size: 14px;
+}
+.container .head .score-box > div h2 {
   color: #3b4363;
   font-size: 40px;
 }

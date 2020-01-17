@@ -95,10 +95,23 @@ body{
         color: 	#2a46c0;
         letter-spacing: 1px;
         font-weight: 600;
+        display: block;
       }
-      h2 {
-        color:#3b4363;
-        font-size: 40px;
+      > div {
+        display: inline-block;
+        &.user-score {
+          border-right: 2px solid #215487;
+          margin-right: 5px;
+          padding-right: 10px;
+        }
+        p {
+          color: #3b4363;
+          font-size: 14px;
+        }
+        h2 {
+          color:#3b4363;
+          font-size: 40px;
+        }
       }
     }
   }
