@@ -11,9 +11,8 @@
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  line-height: 9;
-  border: 10px solid #215487;
   cursor: pointer;
+  border: 10px solid #215487;
   img {
     width: 60%;
     margin: auto;
@@ -108,7 +107,6 @@ body{
     .chooises {
       position: absolute ;
       left: calc(50% - 150px);
-      z-index: -1;
       &:before {
         content: "";
         background: url(../images/bg-triangle.svg) no-repeat;
@@ -119,6 +117,7 @@ body{
       };
       div {
         position: absolute;
+        cursor: pointer;
       }
       .paper {
         @include chooise();

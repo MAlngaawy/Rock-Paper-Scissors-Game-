@@ -25,40 +25,52 @@
       </div>
       <div class="score-box">
         <span>Score</span>
-        <h2 class="score">12</h2>
+        <h2 class="score">0</h2>
       </div>
     </div>
-    <div class="game d-none">
+    <div class="game">
       <div class="chooises">
-        <div class="paper">
+        <div class="paper" onclick="chooise(this)">
           <img src="images/icon-paper.svg" alt="icon-paper">
         </div>
-        <div class="scissors">
+        <div class="scissors" onclick="chooise(this)">
           <img src="images/icon-scissors.svg" alt="icon-scissors">
         </div>
-        <div class="rock">
+        <div class="rock" onclick="chooise(this)">
           <img src="images/icon-rock.svg" alt="icon-rock">
         </div>
       </div>
     </div>
-    <div class="result-section">
+    <div class="result-section d-none">
       <div class="user-chooise">
         <h3>you picked</h3>
         <div class="chooise">
+          <div class="rock">
+            <img src="images/icon-rock.svg" alt="icon-paper">
+          </div>
           <div class="paper">
             <img src="images/icon-paper.svg" alt="icon-paper">
+          </div>
+          <div class="scissors">
+            <img src="images/icon-scissors.svg" alt="icon-paper">
           </div>
         </div>
       </div>
       <div class="result">
-        <h1 class="user-result">You Win</h1>
-        <button class="play-again">Play again</button>
+        <h1 class="user-result"></h1>
+        <button class="play-again" onclick="playAgain()">Play again</button>
       </div>
       <div class="house-chooise">
         <h3>The House Picked</h3>
         <div class="chooise">
           <div class="rock">
             <img src="images/icon-rock.svg" alt="icon-rock">
+          </div>
+          <div class="paper">
+            <img src="images/icon-paper.svg" alt="icon-rock">
+          </div>
+          <div class="scissors">
+            <img src="images/icon-scissors.svg" alt="icon-rock">
           </div>
         </div>
       </div>

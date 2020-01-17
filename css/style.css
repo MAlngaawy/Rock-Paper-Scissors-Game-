@@ -96,7 +96,6 @@ body {
 .container .game .chooises {
   position: absolute;
   left: calc(50% - 150px);
-  z-index: -1;
 }
 .container .game .chooises:before {
   content: "";
@@ -108,6 +107,7 @@ body {
 }
 .container .game .chooises div {
   position: absolute;
+  cursor: pointer;
 }
 .container .game .chooises .paper {
   display: grid;
@@ -115,9 +115,8 @@ body {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  line-height: 9;
-  border: 10px solid #215487;
   cursor: pointer;
+  border: 10px solid #215487;
   left: -10px;
   top: -25px;
   border-color: #5671f5;
@@ -132,9 +131,8 @@ body {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  line-height: 9;
-  border: 10px solid #215487;
   cursor: pointer;
+  border: 10px solid #215487;
   top: -25px;
   right: -328px;
   border-color: #eca922;
@@ -149,9 +147,8 @@ body {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  line-height: 9;
-  border: 10px solid #215487;
   cursor: pointer;
+  border: 10px solid #215487;
   bottom: -290px;
   left: 105px;
   border-color: #dd405d;
@@ -185,9 +182,8 @@ body {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  line-height: 9;
-  border: 10px solid #215487;
   cursor: pointer;
+  border: 10px solid #215487;
   width: 200px;
   height: 200px;
   border-width: 20px;
