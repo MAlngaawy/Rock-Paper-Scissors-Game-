@@ -1,2 +1,3 @@
-# simple Rock Paper Scissors Game 
+## simple Rock Paper Scissors Game 
 
+#### With vanilla JavaScript
